@@ -1,10 +1,10 @@
-id: habets38_sweepsinkv
+id: habets39_sweepsinkv
 label: sweepsinkv
-category: '[habets38]'
+category: '[habets39]'
 
 templates:
-  imports: import habets38
-  make: habets38.sweepsinkv(${tag}, ${vlen}, ${samp_rate})
+  imports: import habets39
+  make: habets39.sweepsinkv(${tag}, ${vlen}, ${samp_rate})
 
 #  Make one 'parameters' list entry for every parameter you want settable from the GUI.
 #     Keys include:
