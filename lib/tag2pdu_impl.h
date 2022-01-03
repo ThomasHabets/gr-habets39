@@ -16,13 +16,15 @@ namespace habets39 {
 class tag2pdu_impl : public tag2pdu
 {
 private:
-  pmt::pmt_t d_port;
-  std::string d_tag_start;
-  std::string d_tag_end;
-  bool active = false;
-  std::vector<uint8_t> d_data;
+    pmt::pmt_t d_port;
+    pmt::pmt_t d_tag_start;
+    pmt::pmt_t d_tag_end;
+    bool d_active = false;
+    std::vector<uint8_t> d_data;
+    int d_min_size;
+
 public:
-    tag2pdu_impl(const std::string& tag_start, const std::string& tag_end);
+    tag2pdu_impl(const std::string& tag_start, const std::string& tag_end, int min_size);
     ~tag2pdu_impl();
 
     // Where all the action really happens

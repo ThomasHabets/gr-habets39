@@ -4,7 +4,7 @@ category: '[habets39]'
 
 templates:
   imports: import habets39
-  make: habets39.tag2pdu(${tag_start}, ${tag_end})
+  make: habets39.tag2pdu(${tag_start}, ${tag_end}, ${min_size})
 
 #  Make one 'parameters' list entry for every parameter you want settable from the GUI.
 #     Keys include:
@@ -19,6 +19,10 @@ parameters:
 - id: tag_end
   label: End tag
   dtype: string
+- id: min_size
+  label: Minimum pdu size
+  dtype: int
+  default: 24
 
 #  Make one 'inputs' list entry per input and one 'outputs' list entry per output.
 #  Keys include:

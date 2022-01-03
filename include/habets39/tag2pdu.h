@@ -32,7 +32,8 @@ public:
      * class. habets39::tag2pdu::make is the public interface for
      * creating new instances.
      */
-    static sptr make(const std::string& tag_start, const std::string& tag_end);
+    static sptr
+    make(const std::string& tag_start, const std::string& tag_end, int min_size);
 };
 
 } // namespace habets39
