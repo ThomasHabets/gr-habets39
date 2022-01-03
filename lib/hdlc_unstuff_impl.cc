@@ -11,6 +11,8 @@
 namespace gr {
 namespace habets39 {
 
+const std::vector<uint8_t> flag = { 0, 1, 1, 1, 1, 1, 1, 0 };
+
 hdlc_unstuff::sptr hdlc_unstuff::make()
 {
     return gnuradio::make_block_sptr<hdlc_unstuff_impl>();
@@ -90,12 +92,29 @@ void hdlc_unstuff_impl::handle(const pmt::pmt_t& msg)
 {
     const auto in = pmt_to_vector(msg);
     std::clog << "HABETS: Got PDU of size " << in.size() << "\n";
-    const auto out = unstuff(in);
-    if (!out.second) {
+    auto outok = unstuff(in);
+    if (!outok.second) {
         std::clog << "HDLC Unstuff: bad input\n";
         return;
     }
-    const auto v = pmt::init_u8vector(out.first.size(), out.first);
+    auto& out = outok.first;
+
+    out.resize(out.size() & ~0x7); // Chop off partial bytes.
+
+    // Remove trailing flags.
+    for (;;) {
+        if (out.size() < flag.size()) {
+            break;
+        }
+        if (!std::equal(flag.begin(), flag.end(), &out[out.size() - flag.size()])) {
+            break;
+        }
+        out.resize(out.size() - flag.size());
+    }
+    if (out.empty()) {
+        return;
+    }
+    const auto v = pmt::init_u8vector(out.size(), out);
     const auto pdu = pmt::cons(pmt::PMT_NIL, v);
     message_port_pub(d_out, pdu);
 }
