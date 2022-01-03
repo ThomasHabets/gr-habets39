@@ -1,0 +1,24 @@
+id: habets39_pdu_pack
+label: pdu_pack
+category: '[habets39]'
+
+templates:
+  imports: import habets39
+  make: habets39.pdu_pack(${strict})
+
+parameters:
+- id: strict
+  label: Strict
+  dtype: bool
+  default: You need to fill in your grc/habets39_pdu_pack.block.yaml
+inputs:
+- label: in
+  domain: message
+
+outputs:
+- label: out
+  domain: message
+
+#  'file_format' specifies the version of the GRC yml format used in the file
+#  and should usually not be changed.
+file_format: 1

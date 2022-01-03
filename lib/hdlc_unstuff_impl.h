@@ -13,6 +13,8 @@
 namespace gr {
 namespace habets39 {
 
+std::vector<uint8_t> pmt_to_vector(const pmt::pmt_t& msg);
+
 class hdlc_unstuff_impl : public hdlc_unstuff
 {
 private:

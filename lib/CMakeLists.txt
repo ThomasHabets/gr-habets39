@@ -15,6 +15,7 @@ list(APPEND habets39_sources
     sweepsinkv_impl.cc
     tag2pdu_impl.cc
     hdlc_unstuff_impl.cc
+    pdu_pack_impl.cc
 )
 
 set(habets39_sources "${habets39_sources}" PARENT_SCOPE)

@@ -31,7 +31,8 @@ include(GrPybind)
 list(APPEND habets39_python_files
     sweepsinkv_python.cc
     tag2pdu_python.cc
-    hdlc_unstuff_python.cc python_bindings.cc)
+    hdlc_unstuff_python.cc
+    pdu_pack_python.cc python_bindings.cc)
 
 GR_PYBIND_MAKE_OOT(habets39 
    ../..
