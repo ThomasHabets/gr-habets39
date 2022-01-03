@@ -32,3 +32,4 @@ include(GrTest)
 
 set(GR_TEST_TARGET_DEPS gnuradio-habets39)
 GR_ADD_TEST(qa_sweepsinkv ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/qa_sweepsinkv.py)
+GR_ADD_TEST(qa_tag2pdu ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/qa_tag2pdu.py)

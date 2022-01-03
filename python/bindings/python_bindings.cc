@@ -22,6 +22,7 @@ namespace py = pybind11;
 /**************************************/
 // BINDING_FUNCTION_PROTOTYPES(
     void bind_sweepsinkv(py::module& m);
+    void bind_tag2pdu(py::module& m);
 // ) END BINDING_FUNCTION_PROTOTYPES
 
 
@@ -51,5 +52,6 @@ PYBIND11_MODULE(habets39_python, m)
     /**************************************/
     // BINDING_FUNCTION_CALLS(
     bind_sweepsinkv(m);
+    bind_tag2pdu(m);
     // ) END BINDING_FUNCTION_CALLS
 }

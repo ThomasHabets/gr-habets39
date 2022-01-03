@@ -13,6 +13,7 @@ include(GrPlatform) #define LIB_SUFFIX
 
 list(APPEND habets39_sources
     sweepsinkv_impl.cc
+    tag2pdu_impl.cc
 )
 
 set(habets39_sources "${habets39_sources}" PARENT_SCOPE)

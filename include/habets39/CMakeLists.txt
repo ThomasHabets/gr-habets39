@@ -11,5 +11,6 @@
 ########################################################################
 install(FILES
     api.h
-    sweepsinkv.h DESTINATION include/habets39
+    sweepsinkv.h
+    tag2pdu.h DESTINATION include/habets39
 )
