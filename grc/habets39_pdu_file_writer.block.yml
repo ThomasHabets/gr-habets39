@@ -1,22 +1,18 @@
-id: habets39_pdu_pack
-label: PDU pack
+id: habets39_pdu_file_writer
+label: PDU file writer
 category: '[habets39]'
 
 templates:
   imports: import habets39
-  make: habets39.pdu_pack(${strict})
+  make: habets39.pdu_file_writer(${output_dir})
 
 parameters:
-- id: strict
-  label: Strict
-  dtype: bool
-  default: False
+- id: output_dir
+  label: Output directory
+  dtype: string
+
 inputs:
 - label: in
-  domain: message
-
-outputs:
-- label: out
   domain: message
 
 #  'file_format' specifies the version of the GRC yml format used in the file

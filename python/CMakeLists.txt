@@ -35,3 +35,4 @@ GR_ADD_TEST(qa_sweepsinkv ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/qa_sw
 GR_ADD_TEST(qa_tag2pdu ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/qa_tag2pdu.py)
 GR_ADD_TEST(qa_hdlc_unstuff ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/qa_hdlc_unstuff.py)
 GR_ADD_TEST(qa_pdu_pack ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/qa_pdu_pack.py)
+GR_ADD_TEST(qa_pdu_file_writer ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/qa_pdu_file_writer.py)

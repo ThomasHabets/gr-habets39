@@ -31,6 +31,19 @@ hdlc_unstuff_impl::hdlc_unstuff_impl()
     set_msg_handler(d_in, [this](const pmt::pmt_t& msg) { handle(msg); });
 }
 
+std::string xsprintf(const char* fmt, ...)
+{
+    va_list va;
+    va_start(va, fmt);
+    va_list va2;
+    va_copy(va2, va);
+    const auto len = vsnprintf(nullptr, 0, fmt, va2);
+    char buf[len + 1] = { 0 };
+    vsnprintf(buf, len + 1, fmt, va);
+    va_end(va);
+    return buf;
+}
+
 std::vector<uint8_t> pmt_to_vector(const pmt::pmt_t& msg)
 {
     auto blob = pmt::cdr(msg);

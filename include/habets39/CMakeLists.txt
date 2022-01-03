@@ -14,5 +14,6 @@ install(FILES
     sweepsinkv.h
     tag2pdu.h
     hdlc_unstuff.h
-    pdu_pack.h DESTINATION include/habets39
+    pdu_pack.h
+    pdu_file_writer.h DESTINATION include/habets39
 )
