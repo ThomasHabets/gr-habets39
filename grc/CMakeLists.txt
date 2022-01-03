@@ -8,5 +8,6 @@
 
 install(FILES
     habets39_sweepsinkv.block.yml
-    habets39_tag2pdu.block.yml DESTINATION share/gnuradio/grc/blocks
+    habets39_tag2pdu.block.yml
+    habets39_hdlc_unstuff.block.yml DESTINATION share/gnuradio/grc/blocks
 )

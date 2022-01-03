@@ -12,5 +12,6 @@
 install(FILES
     api.h
     sweepsinkv.h
-    tag2pdu.h DESTINATION include/habets39
+    tag2pdu.h
+    hdlc_unstuff.h DESTINATION include/habets39
 )
