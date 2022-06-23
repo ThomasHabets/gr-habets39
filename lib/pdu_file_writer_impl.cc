@@ -8,6 +8,8 @@
 #include "hdlc_unstuff_impl.h"
 #include "pdu_file_writer_impl.h"
 #include <gnuradio/io_signature.h>
+#include <fstream>
+#include <sys/stat.h>
 
 namespace gr {
 namespace habets39 {

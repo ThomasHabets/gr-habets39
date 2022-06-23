@@ -7,6 +7,7 @@
 
 #include "hdlc_unstuff_impl.h"
 #include <gnuradio/io_signature.h>
+#include <cstdarg>
 
 namespace gr {
 namespace habets39 {
