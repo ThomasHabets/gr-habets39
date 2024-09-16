@@ -8,6 +8,8 @@
 #include "tag2pdu_impl.h"
 #include <gnuradio/io_signature.h>
 
+#include <set>
+
 namespace gr {
 namespace habets39 {
 
